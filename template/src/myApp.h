@@ -2,8 +2,6 @@
 #define BIN_GAP_H
 
 // prototypes
-int int2bin(int n,int * bin);
-int gap(int n);
-int printbin(int * bin,int size);
+int myfunction (int * bin);
 
 #endif

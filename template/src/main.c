@@ -3,9 +3,14 @@
 #include "myApp.h"
 #include "mydebug.h"
 
-int main()
+int main(int argc, char * argv[])
 {
-    int nbr=104;
-    printf("Gap for %d is %d",nbr,getGap(nbr));
-    return 0;
+    printf("Running %s\n",argv[0]);
+    int * nbr;
+    int mynbr=104;
+
+    nbr=&mynbr;
+    printf("Number is %d, return is  %d\n",*nbr,myfunction(nbr));
+    return EXIT_SUCCESS; // equivalent to returning 0
+ //  return EXIT_FAILURE ; // equivalent to returning 1
 }
