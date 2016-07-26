@@ -1,0 +1,19 @@
+
+# scons -c   clean
+# -g for debugging symbols
+# -D <macro>
+
+
+## most simple script
+#Program ('output',['main.cpp','classA.cpp'])
+###
+
+
+sources = ['src/main.c','src/myApp.c']
+libraries = ["pthread"]
+
+env = Environment()
+env.Append(CCFLAGS='-g')
+#o=env.Object('obj/cr','src/cr.c')
+component=env.Program (target='bin/myApp',source=sources,LIBS=libraries)
+
