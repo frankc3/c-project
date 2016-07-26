@@ -7,7 +7,7 @@
 SRC="myunittest.cpp"
 SRC_DIR="unittest" 
 OUTPUT_DIR="bin"
-PROGRAM="ut_bin_gap"
+PROGRAM="ut_myApp"
 OUTPUT="$OUTPUT_DIR/$PROGRAM" 
 
 if [ ! -d $OUTPUT_DIR ];then
@@ -26,7 +26,7 @@ echo "running  $OUTPUT"
 export GTEST_HOME=~/usr/gtest
 #export LD_LIBRARY_PATH=$GTEST_HOME/lib:$LD_LIBRARY_PATH
 #g++ -I $GTEST_HOME/include -L $GTEST_HOME/lib -lgtest -lgtest_main -lpthread 
-g++ -g -Wall $SRC_DIR'/'$SRC  src/binGap.c  -I /usr/include/gtest/ -L /usr/lib/ -lgtest -lgtest_main -lpthread  -o $OUTPUT
+g++ -g -Wall $SRC_DIR'/'$SRC  src/myApp.c -D UNIT_TEST  -I /usr/include/gtest/ -L /usr/lib/ -lgtest -lgtest_main -lpthread  -o $OUTPUT
 #g++ $SRC_DIR'/'$SRC  -lcppunit -o $OUTPUT
 if [ $? -ne "0" ];then
 	echo "compiltion  error code:#?"

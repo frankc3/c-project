@@ -1,24 +1,17 @@
 #ifdef UNIT_TEST
 #include "gtest/gtest.h"
-#include "../src/binGap.h"
+#include "../src/myApp.h"
 #include <limits.h>
 #include <math.h>
 
-    TEST(printbin, zerodata) {
-        int test_bin_ar[32]={0};
-        EXPECT_EQ( printbin(test_bin_ar,2), 2);
-        EXPECT_EQ( printbin(test_bin_ar,0), 0);
-        EXPECT_EQ( printbin(test_bin_ar,32), 32);
+    TEST(myFuctionTest1, zero) {
+        int myvar=0;
+        EXPECT_EQ( myfunction(&myvar), 2);
     }
-    TEST(gap, normal) {
-            EXPECT_EQ(gap(INT_MIN), 0);
-            EXPECT_EQ(gap(-1), 0);
-            EXPECT_EQ(gap(0), 0);
-            EXPECT_EQ(gap(6), 0);
-            EXPECT_EQ(gap(16), 0);
-            EXPECT_EQ(gap(33), 4);
-            EXPECT_EQ(gap(INT_MAX), 0);
-            EXPECT_EQ(gap(pow(2,30)+1), 29);
+    TEST(testFunction2, normal) {
+        int myvar=1;
+        EXPECT_EQ( myfunction(&myvar),myvar+2);
+
     }
 
 

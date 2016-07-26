@@ -3,6 +3,8 @@
 #include "myApp.h"
 #include "mydebug.h"
 
+/**<  The main function is in a separate file */
+
 int main(int argc, char * argv[])
 {
     printf("Running %s\n",argv[0]);
