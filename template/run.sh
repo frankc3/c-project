@@ -1,12 +1,10 @@
 #!/bin/bash
-#
 set -e #exit on error
-#set -x #print each cmd line
+set -x #print each cmd line
 
-SRC="src/binGap.c src/main.c"
+SRC="src/myApp.c src/main.c"
 OUTPUT_DIR="bin"
-OUTPUT="$OUTPUT_DIR/bin_gap"
-
+OUTPUT="$OUTPUT_DIR/my_app"
 #-------------------------------------
 #          Make dir
 #-------------------------------------
